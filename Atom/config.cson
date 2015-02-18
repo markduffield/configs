@@ -1,0 +1,20 @@
+"*":
+  editor:
+    invisibles: {}
+    fontFamily: "Source Code Pro Medium"
+    fontSize: 14
+    lineHeight: 1.4
+    tabLength: 4
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+  core:
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+    autoHideMenuBar: true
+    audioBeep: false
+  "exception-reporting":
+    userId: "9ef8287f-4c4e-28a8-7d2e-68f3acdafe8b"
+  welcome:
+    showOnStartup: false
