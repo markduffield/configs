@@ -1,15 +1,15 @@
 # DEPENDENCIES
 # ==============================================================================
-
 # Antigen
+
 -load-dependencies() {
     # Antigen
-    if ! [ -f $HOME/antigen.zsh ]; then
+    if ! [[ -f $HOME/antigen.zsh ]]; then
         curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/antigen.zsh
     fi
 
     # Gnome terminal theme
-    if [[ $CURRENT_OS == 'Linux' && -f $HOME/base16-ocean.light.sh ]]; then
+    if [[ ( $CURRENT_OS == 'Linux' ) && ! ( -f $HOME/base16-ocean.light.sh ) ]]; then
         curl -L https://raw.githubusercontent.com/chriskempson/base16-gnome-terminal/master/base16-ocean.light.sh > $HOME/base16-ocean.light
     fi
 }
@@ -49,12 +49,12 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     antigen bundle brew-cask
     antigen bundle gem
     antigen bundle osx
-elif [[ $CURRENT_OS == 'Linux' ]]; then
-    # None so far...
 
+elif [[ $CURRENT_OS == 'Linux' ]]; then
     if [[ $DISTRO == 'CentOS' ]]; then
         antigen bundle centos
     fi
+
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     antigen bundle cygwin
 fi
