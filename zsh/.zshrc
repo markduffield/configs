@@ -1,14 +1,3 @@
-# Install theme
-. ~/configs/zsh/pure.zsh
-
-# Aliases
-alias l='ls -lh'
-alias ll='ls -la'
-alias k='tree'
-
-# make hash work in terminal
-bindkey -s '^[3' \#
-
 # why would you type 'cd dir' if you could just type 'dir'?
 setopt AUTO_CD
 
@@ -17,7 +6,7 @@ export NODE=/usr/local/share/npm/bin
 export RVM=$HOME/.rvm/bin
 export COMPOSER_VENDOR=$HOME/.composer/vendor/bin
 
-PATH=:$NODE:$RVM:COMPOSER_VENDOR:/usr/local/sbin:/usr/local/bin:/usr/local/share:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr
+PATH=:/usr/local/sbin:/usr/local/bin:/usr/local/share:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr
 
 # Better tab completion
 autoload -U compinit

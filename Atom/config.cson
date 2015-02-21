@@ -1,16 +1,15 @@
 "*":
   editor:
     invisibles: {}
-    fontFamily: "Source Code Pro Medium"
-    fontSize: 14
-    lineHeight: 1.4
     tabLength: 4
     showIndentGuide: true
     softWrapAtPreferredLineLength: true
+    fontFamily: "DejaVu Sans Mono"
+    fontSize: 14
   core:
     themes: [
-      "one-light-ui"
-      "solarized-light-syntax"
+      "spacegray-dark-ui"
+      "base16-ocean-dark-spacegray"
     ]
     autoHideMenuBar: true
     audioBeep: false
