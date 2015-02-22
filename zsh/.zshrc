@@ -80,7 +80,7 @@ alias ping="ping -c 5"      # Ping with 5 packets
 
 # Directories
 alias code="cd ~/Code"
-
+alias vraditz="cd ~/VMs/raditz"
 
 # Zsh Preferences
 # ==============================================================================
