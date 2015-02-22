@@ -1,0 +1,38 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-workspace': [
+    {
+      'label': 'Convert To Unix Format'
+      'command': 'line-ending-converter:convert-to-unix-format'
+    }
+    {
+      'label': 'Convert To Windows Format'
+      'command': 'line-ending-converter:convert-to-windows-format'
+    }
+    {
+      'label': 'Convert To Old Mac Format'
+      'command': 'line-ending-converter:convert-to-old-mac-format'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Line Ending Converter'
+      'submenu': [
+        {
+          'label': 'Convert To Unix Format'
+          'command': 'line-ending-converter:convert-to-unix-format'
+        }
+        {
+          'label': 'Convert To Windows Format'
+          'command': 'line-ending-converter:convert-to-windows-format'
+        }
+        {
+          'label': 'Convert To Old Mac Format'
+          'command': 'line-ending-converter:convert-to-old-mac-format'
+        }
+      ]
+    ]
+  }
+]
