@@ -37,7 +37,6 @@ antigen theme bureau
 antigen bundle git
 antigen bundle tmuxinator
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle ssh-agent
 
 # Node Plugins
 antigen bundle node
