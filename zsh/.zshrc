@@ -81,6 +81,9 @@ alias ping="ping -c 5"      # Ping with 5 packets
 alias code="cd ~/Code"
 alias vraditz="cd ~/VMs/raditz"
 
+# Workflow
+alias gulp="node node_modules/gulp/bin/gulp.js"
+
 # Zsh Preferences
 # ==============================================================================
 
