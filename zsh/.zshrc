@@ -98,8 +98,5 @@ autoload -U promptinit
 # autoload -U compinit
 # compinit
 
-# Enable auto-correction of commands typed
-setopt correctall
-
 # Case insensitive tab completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
