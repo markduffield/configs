@@ -38,4 +38,5 @@ Thumbs.db
 
 # Work flow files #
 ###################
+.idea
 codekit-config.json
