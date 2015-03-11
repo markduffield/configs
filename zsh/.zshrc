@@ -69,7 +69,7 @@ antigen apply
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias clipboard="xclip -se c"
 
-alias ls="ls --color"
+alias ls="ls -G"
 alias l="ls -lh"
 alias ll="ls -la"
 
