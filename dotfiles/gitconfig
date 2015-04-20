@@ -25,3 +25,4 @@
 	default = simple
 [core]
 	autocrlf = input
+	excludesfile = ~/.gitignore_global
