@@ -1,0 +1,81 @@
+# DEPENDENCIES
+# ==============================================================================
+# Antigen
+
+-load-dependencies() {
+    # Antigen
+    if ! [[ -f $HOME/antigen.zsh ]]; then
+        curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/antigen.zsh
+    fi
+
+    # Gnome terminal theme
+    if [[ ( $CURRENT_OS == 'Linux' ) && ! ( -f $HOME/base16-ocean.light.sh ) ]]; then
+        curl -L https://raw.githubusercontent.com/chriskempson/base16-gnome-terminal/master/base16-ocean.light.sh > $HOME/base16-ocean.light
+    fi
+}
+-load-dependencies
+
+
+# THEMEING
+# ==============================================================================
+
+# Enable Antigen
+source $HOME/antigen.zsh
+
+# Load the oh-my-zsh library
+antigen use oh-my-zsh
+
+# Load the theme
+antigen theme bureau
+
+# Load plugins
+antigen bundle git
+antigen bundle tmuxinator
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Node Plugins
+antigen bundle node
+antigen bundle npm
+
+# OS specific plugins
+if [[ $CURRENT_OS == 'OS X' ]]; then
+    antigen bundle brew
+    antigen bundle brew-cask
+    antigen bundle gem
+    antigen bundle osx
+
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+    if [[ $DISTRO == 'CentOS' ]]; then
+        antigen bundle centos
+    fi
+
+elif [[ $CURRENT_OS == 'Cygwin' ]]; then
+    antigen bundle cygwin
+fi
+
+# Apply all options
+antigen apply
+
+
+# ALIASES
+# ==============================================================================
+source $HOME/.aliases
+
+
+# Zsh Preferences
+# ==============================================================================
+
+# PATH variable
+export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Change directory without 'cd'
+setopt AUTO_CD
+
+# Enable coloured prompt
+autoload -U promptinit
+
+# Case insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Use VIM as editor
+export EDITOR=vim
