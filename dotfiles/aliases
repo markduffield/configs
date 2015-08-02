@@ -2,16 +2,11 @@
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias clipboard="xclip -se c"
 
-alias ls="ls -G"
-alias l="ls -lh"
-alias ll="ls -la"
+alias ls="ls --color"
+alias ll="ls -alh"
 
-# Overrides
-alias grep="grep --colour"  # Always highlight
-alias ping="ping -c 5"      # Ping with 5 packets
-
-# Directories
-alias code="cd ~/Code"
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
 
 # Workflow
 alias gulp="node node_modules/gulp/bin/gulp.js"
