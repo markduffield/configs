@@ -24,4 +24,4 @@ fi
 # Local settings, not committed
 if [ -f ~/.bash_local ]; then
   . ~/.bash_local
-fi
+fis
