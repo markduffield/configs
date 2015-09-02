@@ -18,9 +18,6 @@ ln -nfs ${BASEDIR}/dotfiles/gitignore_global ~/.gitignore_global
 echo "Installing .vimrc"
 ln -nfs ${BASEDIR}/dotfiles/vimrc ~/.vimrc
 
-echo "Installing .zshrc..."
-ln -nfs ${BASEDIR}/dotfiles/zshrc ~/.zshrc
-
 echo "Installing .bash_profile..."
 ln -nfs ${BASEDIR}/dotfiles/bash_profile ~/.bash_profile
 
