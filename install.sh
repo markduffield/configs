@@ -26,3 +26,6 @@ ln -nfs ${BASEDIR}/dotfiles/bash_profile ~/.bash_profile
 
 echo "Installing .bash_prompt..."
 ln -nfs ${BASEDIR}/dotfiles/bash_prompt ~/.bash_prompt
+
+# Reload shell
+exec $SHELL -l
