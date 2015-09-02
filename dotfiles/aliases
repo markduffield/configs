@@ -10,3 +10,8 @@ alias reload="exec $SHELL -l"
 
 # Workflow
 alias gulp="node node_modules/gulp/bin/gulp.js"
+alias vup="vagrant up"
+alias vhalt="vagrant halt"
+alias vreload="vagrant reload"
+alias vdestroy="vagrant destroy"
+alias vssh="vagrant ssh"
