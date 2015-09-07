@@ -1,8 +1,18 @@
+#
+# Setup
+# ---------------------------------------------------------
+clear
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+
+#
+# Includes
+# ---------------------------------------------------------
 
 # Aliases
 if [ -f ~/.aliases ]; then

@@ -1,14 +1,35 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+#
 # System
+# ---------------------------------------------------------
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias clipboard="xclip -se c"
 
-alias ls="ls -G"
-alias ll="ls -alh"
+# Better directory listings
+alias ls="ls -GA"
+alias ll="ls -lh"
+
+# Add confirmation messages
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+
+# Grep stuff
+alias h="history | grep "
+alias f="find .  | grep "
+alias p="ps aux  | grep "
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Clean useless files
+alias clean='rm -rf "#"* "."*~ *~ *.bak *.dvi *.aux *.nfo'
+
+#
 # Workflow
+# ---------------------------------------------------------
 alias gulp="node node_modules/gulp/bin/gulp.js"
 alias vup="vagrant up"
 alias vhalt="vagrant halt"
