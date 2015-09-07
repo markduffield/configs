@@ -2,7 +2,7 @@
 alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias clipboard="xclip -se c"
 
-alias ls="ls --color"
+alias ls="ls -G"
 alias ll="ls -alh"
 
 # Reload the shell (i.e. invoke as a login shell)
