@@ -8,7 +8,11 @@ alias upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias clipboard="xclip -se c"
 
 # Better directory listings
-alias ls="ls -GA"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias ls="ls -GA"
+else
+    alias ls="ls -A --color=auto"
+fi
 alias ll="ls -lh"
 
 # Navigation
