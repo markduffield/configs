@@ -11,6 +11,12 @@ alias clipboard="xclip -se c"
 alias ls="ls -GA"
 alias ll="ls -lh"
 
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # Add confirmation messages
 alias rm='rm -iv'
 alias cp='cp -iv'
