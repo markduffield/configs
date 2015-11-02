@@ -4,7 +4,6 @@ filetype plugin indent on
 " == SETTINGS ============================================================
 syntax on       			           " Coloured syntax
 set background=dark		           " Theme
-colorscheme solarized
 set expandtab                      " Tabs - use 4 spaces
 set tabstop
 set shiftwidth=4

@@ -1,0 +1,36 @@
+# If not running interactively, don't do anything!
+[[ $- != *i* ]] && return
+
+#
+# Setup
+# ---------------------------------------------------------
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell;
+
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.
+shopt -s checkwinsize
+
+#
+# Includes
+# ---------------------------------------------------------
+
+# Aliases
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
+# Custom prompt
+if [ -f ~/.bash_prompt ]; then
+  . ~/.bash_prompt
+fi
+
+# Local settings, not committed
+if [ -f ~/.bash_local ]; then
+  . ~/.bash_local
+fi
