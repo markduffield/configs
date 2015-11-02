@@ -2,24 +2,27 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+DOTFILES=("aliases" "gitconfig" "gitignore_global" "bash_profile" "bash_prompt" "vimrc")
+
+
 # Symlinks
 # ==============================================================================
+echo "This script will create the following files:"
+for i in "${DOTFILES[@]}"
+do
+   echo "- ~/.$i"
+done
 
-# Files
-echo "Installing .aliases.."
-ln -nfs ${BASEDIR}/dotfiles/aliases ~/.aliases
+read -p "We will remove these files if they already exist. Continue? (y/n)" CONT
+if [ "$CONT" == "y" ]; then
 
-echo "Installing .gitconfig..."
-ln -nfs ${BASEDIR}/dotfiles/gitconfig ~/.gitconfig
+   for i in "${DOTFILES[@]}"
+   do
+      echo "Installing .$i ..."
+      rm -f ~/.$i
+      ln -nfs ${BASEDIR}/dotfiles/$i ~/.$i
+   done
 
-echo "Installing .gitignore_global..."
-ln -nfs ${BASEDIR}/dotfiles/gitignore_global ~/.gitignore_global
-
-echo "Installing .bash_profile..."
-ln -nfs ${BASEDIR}/dotfiles/bash_profile ~/.bash_profile
-
-echo "Installing .bash_prompt..."
-ln -nfs ${BASEDIR}/dotfiles/bash_prompt ~/.bash_prompt
-
-# Reload shell
-exec $SHELL -l
+   # Reload shell
+   exec $SHELL -l
+fi
