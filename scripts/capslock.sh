@@ -1,3 +1,3 @@
 #!/bin/sh
 
-xkbcomp $HOME/myxkbmap $DISPLAY
+xkbcomp $HOME/.myxkbmap $DISPLAY
