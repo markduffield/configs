@@ -3,7 +3,7 @@
 
 #
 # Setup
-# ---------------------------------------------------------
+#-------------------------------------------------------------------
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
@@ -17,8 +17,15 @@ shopt -s cdspell;
 shopt -s checkwinsize
 
 #
+# PATH
+#-------------------------------------------------------------------
+
+# Add global installs
+PATH=$PATH:~/.composer/vendor/bin
+
+#
 # Includes
-# ---------------------------------------------------------
+# ------------------------------------------------------------------
 
 # Aliases
 if [ -f ~/.bash_aliases ]; then
