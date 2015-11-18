@@ -2,7 +2,7 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-DOTFILES=("aliases" "gitconfig" "gitignore_global" "bashrc" "bash_profile" "bash_aliases" "bash_prompt" "vimrc" "myxkbmap")
+DOTFILES=("aliases" "gitconfig" "gitignore_global" "bashrc" "bash_profile" "bash_aliases" "bash_prompt" "vimrc" "myxkbmap" "xsessionrc")
 
 
 # Symlinks
