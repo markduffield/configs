@@ -4,29 +4,39 @@
 #
 # System
 # ---------------------------------------------------------
-alias upgrade="sudo apt-get update && sudo apt-get upgrade"
-alias clipboard="xclip -se c"
+if [ -n "$(which apt-get)" ]; then
+    alias upgrade="sudo apt-get update && sudo apt-get upgrade"
+    alias clipboard="xclip -se c"
+fi
 
-# Better directory listings
-if [[ "$OSTYPE" == "darwin"* ]]; then
+#
+# Directory listing
+# ---------------------------------------------------------
+if [ "$OSTYPE" == "darwin"* ]; then
     alias ls="ls -GA"
 else
     alias ls="ls -A --color=auto"
 fi
 alias ll="ls -lh"
 
+#
 # Navigation
+# ---------------------------------------------------------
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Add confirmation messages
+#
+# Confirmation messages
+# ---------------------------------------------------------
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 
-# Grep stuff
+#
+# Grep
+# ---------------------------------------------------------
 alias h="history | grep "
 alias f="find .  | grep "
 alias p="ps aux  | grep "
@@ -34,6 +44,9 @@ alias p="ps aux  | grep "
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+#
+# Misc
+# ---------------------------------------------------------
 # Clean useless files
 alias clean='rm -rf "#"* "."*~ *~ *.bak *.dvi *.aux *.nfo'
 

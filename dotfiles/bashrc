@@ -1,11 +1,11 @@
-# If not running interactively, don't do anything!
-[[ $- != *i* ]] && return
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 
 #
 # Global settings
 #-------------------------------------------------------------------
 if [ -f /etc/bashrc ]; then
-      . /etc/bashrc
+    . /etc/bashrc
 fi
 
 #
@@ -27,7 +27,10 @@ shopt -s checkwinsize
 # PATH
 #-------------------------------------------------------------------
 
-# Add global installs
+#
+PATH=$PATH:~/bin
+
+# Composer global binaries
 PATH=$PATH:~/.composer/vendor/bin
 
 #
