@@ -2,14 +2,21 @@
 [[ $- != *i* ]] && return
 
 #
+# Global settings
+#-------------------------------------------------------------------
+if [ -f /etc/bashrc ]; then
+      . /etc/bashrc
+fi
+
+#
 # Setup
 #-------------------------------------------------------------------
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
+shopt -s nocaseglob
 
 # Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
+shopt -s cdspell
 
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
