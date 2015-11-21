@@ -12,7 +12,7 @@ fi
 #
 # Directory listing
 # ---------------------------------------------------------
-if [ "$OSTYPE" == "darwin"* ]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls="ls -GA"
 else
     alias ls="ls -A --color=auto"
