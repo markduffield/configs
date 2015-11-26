@@ -42,6 +42,33 @@ if [ "$CONT" == "y" ]; then
 fi
 echo ""
 
+PHPSTORMFOLDERS=(
+    "codestyles"
+    "colors"
+    "keymaps"
+)
+
+# Common packages
+# ==============================================================================
+echo "Common packages:"
+for i in "${COMMONPACKAGES[@]}"
+do
+   echo "- $i"
+done
+read -p "Would you like to install these packages? [y/N]: " CONT
+if [ "$CONT" == "y" ]; then
+    if [ -n "$(which apt-get)" ]; then
+        sudo apt-get update
+
+        for i in "${COMMONPACKAGES[@]}"
+        do
+          echo "Installing .$i ..."
+          sudo apt-get install $i
+        done
+    fi
+fi
+echo ""
+
 # Symlinks
 # ==============================================================================
 echo "This script will create the following files:"
@@ -61,6 +88,27 @@ if [ "$CONT" == "y" ]; then
    done
 fi
 echo ""
+
+# PhpStorm
+# ==============================================================================
+echo "This script will remove and symlink the following PhpStorm folders:"
+for i in "${PHPSTORMFOLDERS[@]}"
+do
+   echo "- ~/.WebIde100/config/$i"
+done
+
+read -p "Perform the symlink? Local configs will be overwritten if they exist [y/N]: " CONT
+if [ "$CONT" == "y" ]; then
+
+   for i in "${PHPSTORMFOLDERS[@]}"
+   do
+      echo "Symlinking ~/.WebIde100/config/$i ..."
+      rm -rf ~/.WebIde100/config/$i
+      ln -nfs ${BASEDIR}/phpstorm/config/$i ~/.WebIde100/config/$i
+   done
+fi
+echo ""
+
 
 # PHP
 # ==============================================================================
