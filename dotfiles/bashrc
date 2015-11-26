@@ -27,11 +27,14 @@ shopt -s checkwinsize
 # PATH
 #-------------------------------------------------------------------
 
-#
+# User binaries
 PATH=$PATH:~/bin
 
 # Composer global binaries
 PATH=$PATH:~/.composer/vendor/bin
+
+# Google App Engine
+PATH=$PATH:/opt/google_appengine/
 
 #
 # Includes

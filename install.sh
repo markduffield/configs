@@ -2,6 +2,12 @@
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+COMMONPACKAGES=(
+    "curl"
+    "unzip"
+    "build-essential"
+)
+
 DOTFILES=(
     "bashrc"
     "bash_profile"
@@ -15,6 +21,27 @@ DOTFILES=(
     "vimrc"
 )
 
+# Common packages
+# ==============================================================================
+echo "Common packages:"
+for i in "${COMMONPACKAGES[@]}"
+do
+   echo "- $i"
+done
+read -p "Would you like to install these packages? [y/N]: " CONT
+if [ "$CONT" == "y" ]; then
+    if [ -n "$(which apt-get)" ]; then
+        sudo apt-get update
+
+        for i in "${COMMONPACKAGES[@]}"
+        do
+          echo "Installing .$i ..."
+          sudo apt-get install $i
+        done
+    fi
+fi
+echo ""
+
 # Symlinks
 # ==============================================================================
 echo "This script will create the following files:"
@@ -23,7 +50,7 @@ do
    echo "- ~/.$i"
 done
 
-read -p "Create these files? The will be overwritten if they exist [y/N]: " CONT
+read -p "Create these files? They will be overwritten if they exist [y/N]: " CONT
 if [ "$CONT" == "y" ]; then
 
    for i in "${DOTFILES[@]}"
@@ -61,6 +88,21 @@ if [ "$CONT" == "y" ]; then
         # https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
         curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
         sudo apt-get install -y nodejs
+    fi
+fi
+
+
+# Google App Engine
+# ==============================================================================
+read -p "Install Google App Engine (PHP)? [y/N]: " CONT
+if [ "$CONT" == "y" ]; then
+    echo "Downloading and extracting App Engine"
+    wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.25.zip -O /tmp/google_appengine.zip
+    sudo unzip /tmp/google_appengine.zip -d /opt
+
+    echo "Installing PHP CGI"
+    if [ -n "$(which apt-get)" ]; then
+        sudo apt-get install php5-cgi
     fi
 fi
 
