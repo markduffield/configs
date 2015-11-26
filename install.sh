@@ -21,27 +21,6 @@ DOTFILES=(
     "vimrc"
 )
 
-# Common packages
-# ==============================================================================
-echo "Common packages:"
-for i in "${COMMONPACKAGES[@]}"
-do
-   echo "- $i"
-done
-read -p "Would you like to install these packages? [y/N]: " CONT
-if [ "$CONT" == "y" ]; then
-    if [ -n "$(which apt-get)" ]; then
-        sudo apt-get update
-
-        for i in "${COMMONPACKAGES[@]}"
-        do
-          echo "Installing .$i ..."
-          sudo apt-get install $i
-        done
-    fi
-fi
-echo ""
-
 PHPSTORMFOLDERS=(
     "codestyles"
     "colors"
