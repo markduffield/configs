@@ -1,5 +1,10 @@
 <code_scheme name="PSR2">
   <option name="LINE_SEPARATOR" value="&#10;" />
+  <option name="HTML_ATTRIBUTE_WRAP" value="4" />
+  <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+  <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="html,body" />
+  <option name="HTML_INLINE_ELEMENTS" value="abbr,acronym,b,basefont,bdo,big,br,cite,cite,code,dfn,em,font,i,img,input,kbd,label,q,s,samp,select,span,strike,strong,sub,sup,textarea,tt,u,var,a" />
+  <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="" />
   <PHPCodeStyleSettings>
     <option name="ALIGN_PHPDOC_PARAM_NAMES" value="true" />
     <option name="ALIGN_PHPDOC_COMMENTS" value="true" />
