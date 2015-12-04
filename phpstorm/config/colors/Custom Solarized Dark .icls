@@ -11,6 +11,9 @@
     <option name="CARET_COLOR" value="dc322f" />
     <option name="CARET_ROW_COLOR" value="73642" />
     <option name="CONSOLE_BACKGROUND_KEY" value="2b36" />
+    <option name="FILESTATUS_ADDED" value="eaa00" />
+    <option name="FILESTATUS_COPIED" value="eaa00" />
+    <option name="FILESTATUS_MODIFIED" value="b28c00" />
     <option name="GUTTER_BACKGROUND" value="73642" />
     <option name="INDENT_GUIDE" value="73642" />
     <option name="LINE_NUMBERS_COLOR" value="586e75" />
