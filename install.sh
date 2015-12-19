@@ -79,6 +79,8 @@ done
 read -p "Perform the symlink? Local configs will be overwritten if they exist [y/N]: " CONT
 if [ "$CONT" == "y" ]; then
 
+  mkdir -p ~/.WebIde100/config
+
    for i in "${PHPSTORMFOLDERS[@]}"
    do
       echo "Symlinking ~/.WebIde100/config/$i ..."
