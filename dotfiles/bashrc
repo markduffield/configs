@@ -34,7 +34,7 @@ PATH=$PATH:~/bin
 PATH=$PATH:~/.composer/vendor/bin
 
 # Google App Engine
-PATH=$PATH:/opt/google_appengine/
+PATH=$PATH:/opt/google_appengine
 
 #
 # Includes
