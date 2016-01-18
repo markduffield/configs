@@ -1520,6 +1520,9 @@
         <option name="FOREGROUND" value="859900" />
       </value>
     </option>
+    <option name="PHP_PARAMETER">
+      <value />
+    </option>
     <option name="PHP_SCRIPTING_BACKGROUND">
       <value>
         <option name="BACKGROUND" value="2b36" />
