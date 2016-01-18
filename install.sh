@@ -70,23 +70,28 @@ echo ""
 
 # PhpStorm
 # ==============================================================================
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    PHPSTORMDIR="~/Library/Preferences/Webide100"
+else
+    PHPSTORMDIR="~/.WebIde100/config"
+fi
+
 echo "This script will remove and symlink the following PhpStorm folders:"
 for i in "${PHPSTORMFOLDERS[@]}"
 do
-   echo "- ~/.WebIde100/config/$i"
+   echo "- ${PHPSTORMDIR}/$i"
 done
 
 read -p "Perform the symlink? Local configs will be overwritten if they exist [y/N]: " CONT
 if [ "$CONT" == "y" ]; then
+    mkdir -p $PHPSTORMDIR
 
-  mkdir -p ~/.WebIde100/config
-
-   for i in "${PHPSTORMFOLDERS[@]}"
-   do
-      echo "Symlinking ~/.WebIde100/config/$i ..."
-      rm -rf ~/.WebIde100/config/$i
-      ln -nfs ${BASEDIR}/phpstorm/config/$i ~/.WebIde100/config/$i
-   done
+    for i in "${PHPSTORMFOLDERS[@]}"
+    do
+        echo "Symlinking ${PHPSTORMDIR}/$i ..."
+        rm -rf $PHPSTORMDIR/$i
+        ln -nfs $BASEDIR/phpstorm/config/$i $PHPSTORMDIR/$i
+    done
 fi
 echo ""
 
