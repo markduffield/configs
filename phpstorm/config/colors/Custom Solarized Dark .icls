@@ -1,9 +1,9 @@
 <scheme name="Custom Solarized Dark " version="142" parent_scheme="Default">
-  <option name="LINE_SPACING" value="1.1" />
+  <option name="LINE_SPACING" value="1.3" />
   <option name="EDITOR_FONT_SIZE" value="12" />
   <option name="CONSOLE_FONT_NAME" value="DejaVu Sans Mono" />
   <option name="CONSOLE_LINE_SPACING" value="1.0" />
-  <option name="EDITOR_FONT_NAME" value="Source Code Pro Semibold" />
+  <option name="EDITOR_FONT_NAME" value="Source Code Pro for Powerline" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="baffba" />
     <option name="ANNOTATIONS_COLOR" value="586e75" />
