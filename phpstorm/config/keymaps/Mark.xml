@@ -14,6 +14,9 @@
     <keyboard-shortcut first-keystroke="shift ctrl insert" />
   </action>
   <action id="PreviousTab" />
+  <action id="SearchEverywhere">
+    <keyboard-shortcut first-keystroke="alt p" />
+  </action>
   <action id="SplitVertically">
     <keyboard-shortcut first-keystroke="shift ctrl v" />
   </action>
