@@ -53,8 +53,9 @@ alias clean='rm -rf "#"* "."*~ *~ *.bak *.dvi *.aux *.nfo'
 #
 # Workflow
 # ---------------------------------------------------------
+alias c="composer"
 alias t="./vendor/bin/phpunit"
-alias cc="vendor/bin/codecept"
+alias b="./vendor/bin/behat"
 alias gulp="node node_modules/gulp/bin/gulp.js"
 alias jspm="./node_modules/.bin/jspm"
 alias vup="vagrant up"
