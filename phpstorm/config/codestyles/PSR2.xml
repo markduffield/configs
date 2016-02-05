@@ -7,7 +7,6 @@
   <option name="HTML_INLINE_ELEMENTS" value="abbr,acronym,b,basefont,bdo,big,br,cite,cite,code,dfn,em,font,i,img,input,kbd,label,q,s,samp,select,span,strike,strong,sub,sup,textarea,tt,u,var,a" />
   <option name="HTML_DONT_ADD_BREAKS_IF_INLINE_CONTENT" value="" />
   <PHPCodeStyleSettings>
-    <option name="ALIGN_KEY_VALUE_PAIRS" value="true" />
     <option name="ALIGN_PHPDOC_PARAM_NAMES" value="true" />
     <option name="ALIGN_PHPDOC_COMMENTS" value="true" />
     <option name="COMMA_AFTER_LAST_ARRAY_ELEMENT" value="true" />
