@@ -62,3 +62,5 @@ alias vhalt="vagrant halt"
 alias vreload="vagrant reload"
 alias vdestroy="vagrant destroy"
 alias vssh="vagrant ssh"
+
+alias gae="dev_appserver.py --php_executable_path $(which php-cgi)"
