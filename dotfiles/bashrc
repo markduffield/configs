@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #-------------------------------------------------------------------
 
 # User binaries
-PATH=$PATH:~/bin
+PATH=$PATH:/usr/local/sbin:~/bin
 
 # Composer global binaries
 PATH=$PATH:~/.composer/vendor/bin
