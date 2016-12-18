@@ -10,8 +10,6 @@ DOTFILES=(
     "gitconfig"
     "gitignore_global"
     "inputrc"
-    "myxkbmap"
-    "xsessionrc"
     "vimrc"
 )
 
